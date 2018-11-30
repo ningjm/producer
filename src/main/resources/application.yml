@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/aa
+  rabbitmq:
+    host: 192.168.177.128
+    #是访问port不是15672,15672是api和管理界面的port
+    port: 5672
+    username: njm
+    password: 123456
+    #如果要进行消息回调，则这里必须要设置为true
+    publisher-confirms: true
+    virtual-host: /
