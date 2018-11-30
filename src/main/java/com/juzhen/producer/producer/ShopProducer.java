@@ -25,6 +25,7 @@ public class ShopProducer {
     private RabbitTemplate rabbitTemplate;
 
     public void getShop(){
-        rabbitTemplate.convertAndSend("exchang_shop", "shop_key", shopService.getShop(), new CorrelationData(UUID.randomUUID().toString()) );
+//        rabbitTemplate.convertAndSend("exchang_shop", "key.*", shopService.getShop(), new CorrelationData(UUID.randomUUID().toString()) );
+        rabbitTemplate.convertAndSend("exchang_shop2", "", shopService.getShop(), new CorrelationData(UUID.randomUUID().toString()) );
     }
 }
